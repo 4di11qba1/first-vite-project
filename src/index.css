@@ -1,0 +1,35 @@
+body {
+    position: relative;
+    background-color: #DFEEFB;
+    /* aspect-ratio: 16 / 9; */
+    color: #1A4048;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, rgb(255, 255, 255), rgba(0, 0, 0, 0));
+    pointer-events: none;
+    z-index: -999999;
+}
+
+.hoverable-element:hover {
+    transition: all 0.5s;
+    background-color: #018ba1;
+}
+
+a {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+a:hover {
+    transition: all 0.5s;
+    color: #018ba1;
+}

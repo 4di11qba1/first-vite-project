@@ -1,0 +1,48 @@
+.agent {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    font-weight: 600;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.agent:hover {
+    transform: scale(1.1);
+}
+
+.agent .div-element {
+    display: flex;
+    flex-direction: column;
+    transform: translate(20px, 20px);
+}
+
+.agent .highlight-span {
+    color: #04C8E8;
+}
+
+.agent-phone {
+    width: 50px;
+    height: 50px;
+}
+
+.agent .circle1 {
+    fill: #04cae82c;
+}
+
+.agent .circle2 {
+    fill: #04cae82c;
+}
+
+.agent .circle3 {
+    fill: #05C8E8;
+}
+
+.agent-phone-icon {
+    color: white;
+    transform: translate(42px, -112px);
+}
