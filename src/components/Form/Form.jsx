@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './Form.scss'
 
 function Form({ firstForm, handleClick }) {
+  const styles = ({
+    background: 'linear-gradient(to top right, #1EDFEC 5%, #121F20 95%)',
+    color: 'white'
+  })
   return (
     <div className='my-form-wrapper'>
       {firstForm ?
-        <form className="my-form">
-          <h4 className='my-form-header'>You're Pre-Selected up to <span>$100,000</span></h4>
+        <form className="my-form" style={styles}>
+          <h4 className='my-form-header' style={{fontSize: '20px'}}>You're Pre-Selected up to <span>$100,000</span></h4>
           <div style={{display: 'flex', flexDirection: 'column', gap: '10px', width: '100%'}}>
             <label htmlFor='email' aria-label='email'>Email</label>
             <input id='email' name='email' className='my-form-input-elements' type='text' placeholder='Enter your email' />
@@ -17,16 +21,15 @@ function Form({ firstForm, handleClick }) {
               -
               <input id='mailer-code2' className='my-form-input-elements' type='text' placeholder='Code' style={{width: '100%'}} />
           </div>
-          <button className='btn' onClick={(event) => handleClick(event)}>REDEEM OFFER</button>
+          <button className='btn2' onClick={(event) => handleClick(event)}>REDEEM OFFER</button>
           <div style={{display: 'flex', width: '100%', justifyContent: 'center'}}><p>This will not affect your Credit Score</p></div>
         </form> 
         
         :
         
         <form className="my-form">
-          <h4 className='my-form-header'><span>Hello Brandon,</span> Please ensure that your info on this form is correct.</h4>
+          <h4 className='my-form-header' style={{fontSize: '20px'}}><span>Hello Brandon,</span> Please ensure that your info on this form is correct.</h4>
           <div className='my-form-input'>
-
             <div className='my-form-input-div-wrapper'>
               <div className='my-form-input-div'>
                 <label htmlFor='firstname' aria-label='firstname'>First Name</label>

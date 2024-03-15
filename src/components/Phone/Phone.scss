@@ -1,14 +1,24 @@
 .phone-wrapper {
     display: flex;
-    flex-direction: column;
     align-items: center;
     position: absolute;
     top: 50px;
     right: 50px;
+    gap: 10px;
     z-index: 1;
 }
 
 .phone {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 315px;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 0;
+}
+
+.phone2 {
     display: grid;
     grid-template-columns: 30% 70%;
     width: 200px;
@@ -24,37 +34,69 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.2rem;
     height: 50px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
     transition: all 0.5s;
 }
 
-.phone p {
-    font-weight: 600;
+.phone-text {
+    font-weight: 540;
     font-size: 1rem;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
+    .phone-wrapper {
+        left: 30px !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .phone-wrapper {
+        left: 50px;
+        top: 115px;
+        gap: 5px;
+    }
     .phone {
+        grid-template-columns: 100%;
+        width: 155px;
+        height: 40px;
+    }
+    .phone-text {
+        display: none;
+    }
+    .phone div .phone-text {
+        display: block;
+        font-size: 0.8rem;
+    }
+    .phone-icon {
+        border-radius: 10px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .phone2 {
         grid-template-columns: 100%;
         width: 50px;
     }
-    .phone p {
+}
+
+@media screen and (max-width: 850px) {
+    .phone {
+        grid-template-columns: 100%;
+        width: 155px;
+    }
+    .phone-text {
         display: none;
     }
-
+    .phone div .phone-text {
+        display: block;
+    }
     .phone-icon {
         border-radius: 10px;
     }
-}
-
-.phone2 p {
-    font-weight: 600;
-}
-
-@media screen and (max-width: 756px) {
     .phone2 {
-        display: none;
+        grid-template-columns: 100%;
+        width: 50px;
     }
 }

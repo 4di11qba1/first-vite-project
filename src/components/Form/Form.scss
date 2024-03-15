@@ -67,6 +67,22 @@
     background-color: #04C8E8;
     color: white;
     transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn2 {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    color: #252323;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.btn2:hover {
+    background-color: rgb(176, 176, 176);
 }
 
 .btn:hover {

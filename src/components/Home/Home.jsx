@@ -6,7 +6,6 @@ import Features from '../Features/Features'
 import Footer from '../Footer/Footer'
 import Phone from '../Phone/Phone'
 import { useState } from 'react'
-import LogoVector from '../LogoVector/LogoVector'
 
 function Home() {
   const [firstForm, setFirstForm] = useState(true);
@@ -21,16 +20,17 @@ function Home() {
       <div className='home-bg-img'></div>
       <div className='home'>
         <Phone />
-        {/* <LogoVector /> */}
         <div className='main'>
           <div className='form-logo-wrapper'>
             <img className='logo' src='logo.svg' />
             <Form firstForm={firstForm} handleClick={handleClick} />
           </div>
           <div className='hero-section'>
-            <img className='happy-man' src='happy-man.png' />
+            <div className='happy-man-wrapper'>
+              <img className='happy-man' src='happy-man.png' />
+            </div>
             <div className='main-image-wrapper'>
-              <img className='main-image' src='woman.svg' />
+              <img className='main-image' src='woman.png' />
             </div>
             <Agent />
           </div>
