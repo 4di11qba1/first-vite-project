@@ -14,3 +14,9 @@
     flex-wrap: wrap;
     margin-bottom: 60px;
 }
+
+@media screen and (max-width: 1220px) {
+    .features-wrapper {
+        flex-direction: column;
+    }
+}

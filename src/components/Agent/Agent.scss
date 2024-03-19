@@ -3,7 +3,7 @@
     align-items: center;
     gap: 35px;
     font-weight: 600;
-    height: 100px;
+    height: 50px;
     position: absolute;
     left: 0;
     bottom: 50px;
@@ -11,8 +11,15 @@
     transition: all 0.5s;
 }
 
-.agent:hover {
-    transform: scale(1.1);
+.agent:hover .circle1 {
+    // display: block;
+    animation: pulseeffects linear 1.3s infinite;
+    animation-delay: 0.3s;
+}
+
+.agent:hover .circle2 {
+    // display: block;
+    animation: pulseeffects linear 1.3s infinite;
 }
 
 .agent .div-element {
@@ -28,14 +35,17 @@
 .agent-phone {
     width: 50px;
     height: 50px;
+    position: relative;
 }
 
 .agent .circle1 {
     fill: #04cae82c;
+    opacity: 0;
 }
 
 .agent .circle2 {
     fill: #04cae82c;
+    opacity: 0;
 }
 
 .agent .circle3 {
@@ -45,4 +55,19 @@
 .agent-phone-icon {
     color: white;
     transform: translate(42px, -112px);
+}
+
+@keyframes pulseeffects {
+    0% {
+        opacity: 0.5;
+    }   
+    50% {
+        opacity: 0.8;
+    } 
+    75% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

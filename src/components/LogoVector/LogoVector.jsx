@@ -3,7 +3,7 @@ import './LogoVector.scss'
 
 function LogoVector() {
   return (
-    <img className='logo-vector' src='logo-bg-vector.svg' />
+    <img className='logo-vector' src='mask-group.png' />
   )
 }
 

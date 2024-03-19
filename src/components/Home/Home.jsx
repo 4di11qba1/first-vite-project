@@ -4,8 +4,8 @@ import Form from '../Form/Form'
 import Agent from '../Agent/Agent'
 import Features from '../Features/Features'
 import Footer from '../Footer/Footer'
-import Phone from '../Phone/Phone'
 import { useState } from 'react'
+import Header from '../Header/Header'
 
 function Home() {
   const [firstForm, setFirstForm] = useState(true);
@@ -16,27 +16,28 @@ function Home() {
   }
 
   return (
-    <div className='home-bg'>
-      <div className='home-bg-img'></div>
-      <div className='home'>
-        <Phone />
-        <div className='main'>
-          <div className='form-logo-wrapper'>
-            <img className='logo' src='logo.svg' />
-            <Form firstForm={firstForm} handleClick={handleClick} />
-          </div>
-          <div className='hero-section'>
-            <div className='happy-man-wrapper'>
-              <img className='happy-man' src='happy-man.png' />
+    <div className='home-wrapper'>
+      <div className='home-bg'>
+        <Header />
+        <div className='home-bg-img'></div>
+        <div className='home'>
+          <div className='main'>
+            <div className='form-logo-wrapper'>
+              <Form firstForm={firstForm} handleClick={handleClick} />
             </div>
-            <div className='main-image-wrapper'>
-              <img className='main-image' src='woman.png' />
+            <div className='hero-section'>
+              <div className='happy-man-wrapper'>
+                <img className='happy-man' src='happy-man3.png' />
+              </div>
+              <div className='main-image-wrapper'>
+                <img className='main-image' src='woman.png' />
+              </div>
+              <Agent />
             </div>
-            <Agent />
           </div>
+          <Features />
+          <Footer />
         </div>
-        <Features />
-        <Footer />
       </div>
     </div>
   )

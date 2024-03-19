@@ -18,10 +18,6 @@ function Phone() {
             </div>
             <p className='phone-text'>1-888-219-3797</p>
         </button>
-        {/* <div className='phone2'>
-            <p style={{color: '#04C8E8'}}>Se Habla Español</p>
-            <p>1-412-267-0592</p>
-        </div> */}
     </div>
   )
 }

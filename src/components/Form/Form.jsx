@@ -9,19 +9,22 @@ function Form({ firstForm, handleClick }) {
   return (
     <div className='my-form-wrapper'>
       {firstForm ?
-        <form className="my-form" style={styles}>
-          <h4 className='my-form-header' style={{fontSize: '20px'}}>You're Pre-Selected up to <span>$100,000</span></h4>
+        <form className="my-form">
+          <h4 className='my-form-header'>You're Pre-Selected up to <span>$100,000</span></h4>
           <div style={{display: 'flex', flexDirection: 'column', gap: '10px', width: '100%'}}>
             <label htmlFor='email' aria-label='email'>Email</label>
             <input id='email' name='email' className='my-form-input-elements' type='text' placeholder='Enter your email' />
           </div>
           <label htmlFor='mailer-code' aria-label='mailer-code'>Mailer Code</label>
           <div style={{display: 'flex', gap: '10px', width: '100%', alignItems: 'center'}}>
-              <input id='mailer-code' className='my-form-input-elements' type='text' placeholder='C-13' style={{width: '50px'}} />
+              <select id='mailer-code' className='my-form-input-elements' >
+                <option value={'C07'}>C07</option>
+                <option value={'C13'}>C13</option>
+              </select>
               -
               <input id='mailer-code2' className='my-form-input-elements' type='text' placeholder='Code' style={{width: '100%'}} />
           </div>
-          <button className='btn2' onClick={(event) => handleClick(event)}>REDEEM OFFER</button>
+          <button className='btn' onClick={(event) => handleClick(event)}>REDEEM OFFER</button>
           <div style={{display: 'flex', width: '100%', justifyContent: 'center'}}><p>This will not affect your Credit Score</p></div>
         </form> 
         
@@ -82,7 +85,7 @@ function Form({ firstForm, handleClick }) {
         </form>}
         
         {firstForm &&
-          <div style={{display: 'flex', justifyContent: 'center', gap: '5px', width: '100%', alignItems: 'center'}}>
+          <div className='my-form-p'>
               <p>Don't have an offer? </p>
               <a>Click Here</a>
           </div>
