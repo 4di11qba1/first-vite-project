@@ -10,7 +10,7 @@ function Form({ firstForm, handleClick }) {
     <div className='my-form-wrapper'>
       {firstForm ?
         <form className="my-form">
-          <h4 className='my-form-header'>You're Pre-Selected up to <span>$100,000</span></h4>
+          <p className='my-form-header'>You're Pre-Selected up to <span>$100,000</span></p>
           <div style={{display: 'flex', flexDirection: 'column', gap: '10px', width: '100%'}}>
             <label htmlFor='email' aria-label='email'>Email</label>
             <input id='email' name='email' className='my-form-input-elements' type='text' placeholder='Enter your email' />
@@ -31,7 +31,7 @@ function Form({ firstForm, handleClick }) {
         :
         
         <form className="my-form">
-          <h4 className='my-form-header' style={{fontSize: '20px'}}><span>Hello Brandon,</span> Please ensure that your info on this form is correct.</h4>
+          <h4 className='my-form-header'><span>Hello Brandon,</span> Please ensure that your info on this form is correct.</h4>
           <div className='my-form-input'>
             <div className='my-form-input-div-wrapper'>
               <div className='my-form-input-div'>
@@ -75,19 +75,19 @@ function Form({ firstForm, handleClick }) {
           </div>
           <button className='btn' onClick={(event) => handleClick(event)}>SUBMIT</button>
           <div style={{display: 'flex', width: '100%', justifyContent: 'center'}}>
-            <p style={{fontSize: '12px', fontWeight: 'lighter'}}>
+            <p className='my-form1-p' style={{fontWeight: 'lighter'}}>
               By clicking submit i agree that I will be contacted by Clear Credit via text message email, or
-              phone call. Clear Credit IS NOT a marketing agency and your contact info WILL NOT be sold.
-              Your contact information will ONLY be used by Clear Credit for the express and sole purpose
+              phone call. Clear Credit <span className='my-form-bold'>IS NOT</span> a marketing agency and your contact info <span className='my-form-bold'>WILL NOT</span> be sold.
+              Your contact information will <span className='my-form-bold'>ONLY</span> be used by Clear Credit for the express and sole purpose
               of offering a loan or other financial products.
             </p>
           </div>
         </form>}
         
         {firstForm &&
-          <div className='my-form-p'>
+          <div className='my-form-wrapper-p'>
               <p>Don't have an offer? </p>
-              <a>Click Here</a>
+              <a target="_blank" href='https://clearcredit.ai'>Click Here</a>
           </div>
         }
     </div>

@@ -1,29 +1,39 @@
 .phone-wrapper {
     display: flex;
     align-items: center;
-    gap: 1vw;
+    align-self: flex-end;
+    gap: 10px;
     z-index: 1;
 }
 
 .phone {
     display: grid;
     grid-template-columns: 50% 50%;
-    width: 28vw;
+    width: 280px;
     background-color: white;
-    border-radius: 1vw;
+    border-radius: 10px;
     border: none;
     padding: 0;
+    max-height: 80px;
 }
 
 .phone2 {
     display: grid;
     grid-template-columns: 30% 70%;
-    width: 15vw;
+    width: 150px;
     background-color: white;
-    border-radius: 1vw;
+    border-radius: 10px;
     border: none;
     padding: 0;
-    height: 7vh;
+    max-height: 80px;
+}
+
+.phone-number {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .phone-icon {
@@ -32,16 +42,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2vw;
-    height: 7vh;
-    border-top-left-radius: 1vw;
-    border-bottom-left-radius: 1vw;
+    font-size: 1rem;
+    max-height: 80px;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     transition: all 0.5s;
 }
 
 .phone-text {
     font-weight: 500;
-    font-size: 1.2vw;
+    font-size: 0.7rem;
 }
 
 @media screen and (max-width: 350px) {
@@ -87,19 +98,30 @@
     }
 }
 
-// @media screen and (max-width: 850px) {
-//     .phone {
-//         width: 280px;
-//     }
-//     .phone2 {
-//         width: 150px;
-//     }
-//     .phone-icon {
-//         font-size: 0.8rem;
-//         height: 40px;
-//     }
-//     .phone-text {
-//         font-weight: 450;
-//         font-size: 0.8rem;
-//     }
-// }
+@media screen and (min-width: 1600px) {
+    .phone-wrapper {
+        gap: 1vw;
+    }
+    .phone {
+        width: 28vw;
+        max-height: 5vw;
+        border-radius: 0.75vw;
+    }
+    .phone2 {
+        width: 15vw;
+        max-height: 5vw;
+        border-radius: 0.75vw;
+    }
+    .phone-icon {
+        font-size: 1vw;
+        max-height: 5vw;
+        border-top-left-radius: 0.75vw;
+        border-bottom-left-radius: 0.75vw;
+    }
+    .phone-text {
+        font-size: 1vw;
+    }
+    .phone-icon .phone-text {
+        font-size: 1vw;
+    }
+}

@@ -1,10 +1,18 @@
 .home-wrapper {
     background: url('../../../public/bg.png');
-    background-position: center;
+    // background-position: center;
+    background-position-x: right;
+    background-position-y: top;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
 }
+
+// @media screen and (max-height: 1815px) {
+//     .home {
+//         height: 100%;
+//     }
+// }
 
 @media screen and (max-width: 1200px) {
     .home-wrapper {
@@ -16,18 +24,24 @@
 .home {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
     position: relative;
-    padding: 5vw;
-    gap: 10vh;
+    padding: 50px;
+    gap: 50px;
+    height: 100%;
+    // width: 100vw;
 }
 
-@media screen and (min-width: 1300px) and (min-height: 1200px) {
-    .home {
-        height: 100vh;
-    }
+.home-bg {
+    height: 100%;
 }
+
+// @media screen and (min-width: 1300px) and (min-height: 1200px) {
+//     .home {
+//         height: 100vh;
+//     }
+// }
 
 @media screen and (max-width: 500px) {
     .home {
@@ -38,11 +52,19 @@
 .hero-section {
     position: relative;
     width: 100%;
+    height: 70%;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
+}
+
+.form-logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    height: 100%;
 }
 
 @media screen and (max-width: 850px) {
@@ -89,6 +111,7 @@
     display: grid;
     grid-template-columns: 40% 60%;
     width: 100%;
+    // height: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -113,12 +136,9 @@
 }
 
 .main-image {
-    width: 30vw;
-    height: 50vh;
-}
-
-.logo {
-    width: 20vw;
+    width: 400px;
+    height: 400px;
+    mask-image: linear-gradient(#000, transparent);
 }
 
 .logo-form-wrapper {
@@ -128,4 +148,20 @@
 span {
     color: #04C8E8;
     font-weight: 600;
+}
+
+@media screen and (min-width: 1920px) {
+    .home {
+        padding: 5vw;
+    }
+    .main-image {
+        width: 30vw;
+        height: 30vw;
+    }
+}
+
+@media screen and (min-aspect-ratio: 4/3) and (max-aspect-ratio: 4/3) {
+    .home {
+        height: 100%;
+    }
 }

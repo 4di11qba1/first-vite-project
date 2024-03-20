@@ -11,12 +11,32 @@
     gap: 20px;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-bottom: 60px;
 }
 
-@media screen and (max-width: 1220px) {
+.features h1 {
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .features-wrapper {
+        // transform: scale(0.8);
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1025px) {
     .features-wrapper {
         flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .features-wrapper {
+        gap: 1vw;
+    }
+    .features h1 {
+        font-size: 2.5vw;
     }
 }

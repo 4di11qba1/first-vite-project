@@ -11,3 +11,9 @@ footer {
     color: white;
     z-index: 999;
 }
+
+@media screen and (min-width: 1920px) {
+    footer p {
+        font-size: 1.5vw;
+    }
+}

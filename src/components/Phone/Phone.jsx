@@ -10,13 +10,17 @@ function Phone() {
             <div className="phone-icon hoverable-element">
                 <p className='phone-text'>Se Habla Esapñol</p>
             </div>
-            <p className='phone-text'>1-412-267-0592</p>
+            <div className='phone-number'>
+                <p className='phone-text'>1-412-267-0592</p>
+            </div>
         </button>
         <button className="phone2">
             <div className="phone-icon hoverable-element">
                 <FontAwesomeIcon icon={faPhone} />
             </div>
-            <p className='phone-text'>1-888-219-3797</p>
+            <div className='phone-number'>
+                <p className='phone-text'>1-888-219-3797</p>
+            </div>
         </button>
     </div>
   )

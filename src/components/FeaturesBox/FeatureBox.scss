@@ -3,17 +3,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 300px;
-    height: 220px;
+    width: 250px;
+    height: 150px;
     padding: 30px;
     border-radius: 15px;
     position: relative;
     box-shadow: #04cae81b 0px 0px 10px 6px;
+    text-align: center;
 }
 
 .feature-box-bg-image {
     background: url('../../../public/logo-half.svg');
-    background-size: 100px;
+    background-size: 70px;
     background-repeat: no-repeat;
     width: 19%;
     height: 50%;
@@ -54,5 +55,29 @@
 @media screen and (max-width: 530px) {
     .feature-box {
         width: 250px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .feature-box {
+        width: 25vw;
+        height: 20vh;
+        border-radius: 1vw;
+        padding: 2vw;
+    }
+    .feature-box-icon-div {
+        width: 1.5vw;
+        border-radius: 0.5vw;
+        padding: 1vw;
+    }
+    .feature-box-icon {
+        width: 1.5vw;
+        height: 1.5vw;
+    }
+    .feature-box p {
+        font-size: 1vw;
+    }
+    .feature-box-bg-image {
+        background-size: 6vw;
     }
 }

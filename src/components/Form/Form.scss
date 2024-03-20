@@ -1,30 +1,26 @@
 .my-form-wrapper {
-    max-width: 50vw;
+    max-width: 100%;
     height: 100%;
 }
-
-// @media screen and (max-width: 768px) {
-//     .my-form-wrapper {
-//         max-width: 100%;
-//     }
-// }
 
 .my-form {
     display: flex;
     align-items: flex-start;
-    border: 0.1vw solid #04C8E8;
-    border-radius: 2vw;
+    border: 1px solid #04C8E8;
+    border-radius: 15px;
     flex-direction: column;
-    box-sizing: border-box;
-    // height: 100%;
-    gap: 1vw;
-    padding: 2vw;
-    font-size: 1.3vw;
+    gap: 15px;
+    padding: 25px;
     font-weight: 600;
     background-color: #EEFAFC;
     backdrop-filter: blur(10px);
     position: relative;
-    z-index: 10;
+    // z-index: 10;
+}
+
+.my-form-bold {
+    font-weight: bold;
+    color: #1A4048;
 }
 
 .my-form-input {
@@ -43,12 +39,12 @@
 .my-form-input-div-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2vw;
+    gap: 10px;
 }
 
 .my-form-input-div {
     display: flex;
-    gap: 2vw;
+    gap: 10px;
     flex-direction: column;
 }
 
@@ -62,23 +58,25 @@
 }
 
 .my-form-input-elements {
-    padding: 1vw;
-    font-size: 1.3vw;
-    border: 0.1vw solid #04C8E8;
-    border-radius: 0.75vw;
+    padding: 10px;
+    border: 1px solid #04C8E8;
+    border-radius: 5px;
+}
+
+.my-form1-p {
+    font-size: 1vw;
 }
 
 .btn {
     width: 100%;
-    padding: 1vw;
-    border: none;
-    border-radius: 1vw;
+    padding: 10px;
+    border: 1px solid #04C8E8;
+    border-radius: 5px;
     background-color: #04C8E8;
     color: white;
     transition: all 0.5s;
     cursor: pointer;
     font-weight: 600;
-    font-size: 1.2vw;
 }
 
 .btn:hover {
@@ -92,11 +90,33 @@ a {
     font-weight: 600;
 }
 
-.my-form-p {
+.my-form-wrapper-p {
     display: flex;
     justify-content: center;
     gap: 5px;
     width: 100%;
     align-items: center;
-    font-size: 1.2vw;
+    // font-size: 1.2vw;
+}
+
+@media screen and (min-width: 1920px) {
+    .my-form {
+        font-size: 1.5vw;
+        padding: 2.5vw;
+        gap: 1vw;
+        border-radius: 1vw;
+    }
+    .my-form-input-elements {
+        font-size: 1.2vw;
+        padding: 0.5vw;
+        border-radius: 0.5vw;
+    }
+    .btn {
+        font-size: 1.1vw;
+        padding: 0.5vw;
+        border-radius: 0.5vw;
+    }
+    .my-form-wrapper-p {
+        font-size: 1.2vw;
+    }
 }
